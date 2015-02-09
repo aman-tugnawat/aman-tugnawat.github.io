@@ -24,9 +24,9 @@ li > ul, li > ol { margin-bottom: 0; }
 h1, h2, h3, h4, h5, h6 { font-weight: 300; }
 
 /** Links */
-a { color: #22B9EF; text-decoration: none; }
-a:visited { color: #22B9EF; }
-a:hover { color: #adadad; }
+a { color: #adadad; text-decoration: none; }
+a:visited { color: #adadad; }
+a:hover { color: #303030; }
 
 /** Blockquotes */
 blockquote { color: #828282; border-left: 4px solid #e8e8e8; padding-left: 15px; font-size: 18px; letter-spacing: -1px; font-style: italic; }
@@ -183,8 +183,13 @@ pre > code { border: 0; padding-right: 0; padding-left: 0; }
 @media screen and (max-width: 600px) { .page-content .wrapper .home h2 { font-size: 18px; } }
 
 .social-media-list { text-align: center; margin-bottom: 5%; }
-.social-media-list a { font-size: 200%; padding-right: 5%; text-align: center; color: #adadad; }
+.social-media-list a { font-size: 400%; padding-right: 10%; text-align: center; color: #22B9EF; }
 .social-media-list a:last-child { padding-right: 0; }
-.social-media-list a:hover { color: #303030; }
+.social-media-list a:hover { color: #adadad; }
+
+.social-media-list1 { text-align: center; margin-bottom: 5%; }
+.social-media-list1 a { font-size: 400%; padding-right: 10%; text-align: center; color: #303030; }
+.social-media-list1 a:last-child { padding-right: 0; }
+.social-media-list1 a:hover { color: #adadad; }
 
 @media screen and (max-width: 600px) { .social-media-list a { font-size: 150%; } }
