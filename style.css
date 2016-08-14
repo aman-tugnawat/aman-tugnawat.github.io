@@ -3,17 +3,17 @@
 @font-face {
   font-family: "San Francisco";
   font-weight: 100;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-ultralight-webfont.woff"); }
+  src: url("../fonts/sanfranciscodisplay-ultralight-webfont.woff"); }
 /* Regular */
 @font-face {
   font-family: "San Francisco";
   font-weight: 400;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-regular-webfont.woff"); }
+  src: url("../fonts/sanfranciscodisplay-regular-webfont.woff"); }
 /* Bold */
 @font-face {
   font-family: "San Francisco";
   font-weight: 700;
-  src: url("https://applesocial.s3.amazonaws.com/assets/styles/fonts/sanfrancisco/sanfranciscodisplay-bold-webfont.woff"); }
+  src: url("../fonts/sanfranciscodisplay-bold-webfont.woff"); }
 html, body {
   margin: 0;
   padding: 0;
