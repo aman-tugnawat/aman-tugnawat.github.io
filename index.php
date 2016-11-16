@@ -54,8 +54,8 @@
                                 
                                 <div class="info-footer__kitchener">
                                     <!--<img src="icon-kitchener.svg" class="info-footer__kitchener-img">-->
-                                    <a href="https://aman-tugnawat.github.io" target="_blank" class="info-footer__kitchener-text">Designed and maintained by:Aman Tugnawat</a>
-                                    <?php include("/counter.php");?>
+                                    <a href="https://aman-tugnawat.github.io" target="_blank" class="info-footer__kitchener-text">Designed and maintained by:Aman Tugnawat<?php include("/counter.php");?></a>
+                                    
 
                                 </div>
                                 <div class="info-footer__social" style="font-size: 200%;">
