@@ -278,7 +278,8 @@ h2 {
     float: right;
     content: "";
     font-family: "FontAwesome";
-    font-size: 12px; }
+    font-size: 12px;
+    position: absolute; }
   .info__button:hover, .info__button--dark:hover {
     color: white;
     background-color: #2ABAF5; }
