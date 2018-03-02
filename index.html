@@ -28,60 +28,27 @@
         <!-- Included CSS Files -->
         <link rel="stylesheet" href="./extras/app.min.css">
 
+         <!-- Initialize JS Plugins/Shims -->
+        <!--<script src="nodePattern.js"></script>-->
+        <script src="./extras/jquery.js"></script>
+        <script src="./extras/CSSRulePlugin.min.js"></script>
+        <script src="./extras/TweenMax.min.js"></script>
+        <script src="./extras/app.min.js"></script>
+        <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+
+
 		<link href="kudos.css" media="screen" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="jquery-1.9.1.min.js"></script>
-		<script type="text/javascript" src="jquery.cookie.js"></script>
-		<script type="text/javascript" src="kudos.js"></script>
-		<script type="text/javascript">
-			// needs to be a string for jquery.cookie
-			var postId = '1'; 
-			$(function()
-			{
-				// initialize kudos
-				$("figure.kudoable").kudoable();
-				// check to see if user has already kudod
-				// fyi cookies do not work when you are viewing this as a file
-				if($.cookie(postId) == 'true') {
-					// make kudo already kudod
-					$("figure.kudoable").removeClass("animate").addClass("complete");
-					// your server would take care of the proper kudos count, but because this is a
-					// static page, we need to set it here so it doesn't become -1 when you remove
-					// the kudos after a reload
-					$(".num").html(1);
-				}	
-				// when kudoing
-				$("figure.kudo").bind("kudo:active", function(e)
-				{
-					console.log("kudoing active");
-				});
-				// when not kudoing
-				$("figure.kudo").bind("kudo:inactive", function(e)
-				{
-					console.log("kudoing inactive");
-				});
-				// after kudo'd
-				$("figure.kudo").bind("kudo:added", function(e)
-				{
-					var element = $(this);
-					// ajax'y stuff or whatever you want
-					console.log("Kodo'd:", element.data('id'), ":)");
-					// set cookie so user cannot kudo again for 7 days
-					$.cookie(postId, 'true', { expires: 7 });
-				});
-				// after removing a kudo
-				$("figure.kudo").bind("kudo:removed", function(e)
-				{
-					var element = $(this);
-					// ajax'y stuff or whatever you want
-					console.log("Un-Kudo'd:", element.data('id'), ":(");
-					// remove cookie
-					$.removeCookie(postId);
-				});
-			});
-		</script>
+
+		
         
     </head>
+   
+
+    
     <body data-gr-c-s-loaded="true">
+
+		
+
         <section class="main-container">
             <div class="blocks">
                 <div class="block block--left" style="transform: matrix(1, 0, 0, 1, 0, 0); visibility: inherit; opacity: 1;">
@@ -96,7 +63,9 @@
                             </h1>
                             <div class="info-main block__title " >
                                     <a href="mailto:aman.tugnawat@gmail.com" class="info__button--dark">Contact me.</a>
+              
                             </div>
+                           
                             
                         </div>
 
@@ -106,15 +75,7 @@
                                 <div class="info-footer__kitchener">
                                     <!--<img src="icon-kitchener.svg" class="info-footer__kitchener-img">-->
                                     <a href="https://aman-tugnawat.github.io" target="_blank" class="info-footer__kitchener-text">Designed and maintained by:Aman Tugnawat</a>
-                                    <figure class="kudo kudoable" data-id="1">
-										<a class="kudobject">
-											<div class="opening"><div class="circle">&nbsp;</div></div>
-										</a>
-										<a href="#kudo" class="count">
-											<span class="num">0</span>
-											<span class="txt">Kudos</span>
-										</a>
-									</figure>
+                                    
 
                                 </div>
                                 <div class="info-footer__social" style="font-size: 300%;">
@@ -181,13 +142,68 @@
             </div>
         </section>
 
-        <!-- Initialize JS Plugins/Shims -->
-        <!--<script src="nodePattern.js"></script>-->
-        <script src="./extras/jquery.js"></script>
-        <script src="./extras/CSSRulePlugin.min.js"></script>
-        <script src="./extras/TweenMax.min.js"></script>
-        <script src="./extras/app.min.js"></script>
-        <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+       
+
+        <script type="text/javascript" src="jquery-1.9.1.min.js"></script>
+		<script type="text/javascript" src="jquery.cookie.js"></script>
+		<script type="text/javascript" src="kudos.js"></script>
+		<script type="text/javascript">
+			// needs to be a string for jquery.cookie
+			var postId = '1'; 
+			$(function()
+			{
+				// initialize kudos
+				$("figure.kudoable").kudoable();
+				// check to see if user has already kudod
+				// fyi cookies do not work when you are viewing this as a file
+				if($.cookie(postId) == 'true') {
+					// make kudo already kudod
+					$("figure.kudoable").removeClass("animate").addClass("complete");
+					// your server would take care of the proper kudos count, but because this is a
+					// static page, we need to set it here so it doesn't become -1 when you remove
+					// the kudos after a reload
+					$(".num").html(1);
+				}	
+				// when kudoing
+				$("figure.kudo").bind("kudo:active", function(e)
+				{
+					console.log("kudoing active");
+				});
+				// when not kudoing
+				$("figure.kudo").bind("kudo:inactive", function(e)
+				{
+					console.log("kudoing inactive");
+				});
+				// after kudo'd
+				$("figure.kudo").bind("kudo:added", function(e)
+				{
+					var element = $(this);
+					// ajax'y stuff or whatever you want
+					console.log("Kodo'd:", element.data('id'), ":)");
+					// set cookie so user cannot kudo again for 7 days
+					$.cookie(postId, 'true', { expires: 7 });
+				});
+				// after removing a kudo
+				$("figure.kudo").bind("kudo:removed", function(e)
+				{
+					var element = $(this);
+					// ajax'y stuff or whatever you want
+					console.log("Un-Kudo'd:", element.data('id'), ":(");
+					// remove cookie
+					$.removeCookie(postId);
+				});
+			});
+		</script>
+
+        <figure class="kudo kudoable" data-id="1" style="">
+										<a class="kudobject">
+											<div class="opening"><div class="circle">&nbsp;</div></div>
+										</a>
+										<a href="#kudo" class="count">
+											<span class="num">0</span>
+											<span class="txt">Kudos</span>
+										</a>
+		</figure>
 
 </body>
 </html>
