@@ -162,7 +162,23 @@
 					// your server would take care of the proper kudos count, but because this is a
 					// static page, we need to set it here so it doesn't become -1 when you remove
 					// the kudos after a reload
-					$(".num").html(1);
+                    var kudos_count=1;
+                    jQuery.ajax({
+                        type: "POST",
+                        url: 'kudo.php',
+                        dataType: 'json',
+                        data: {functionname: 'get', arguments: [1, 2]},
+
+                        success: function (obj, textstatus) {
+                                      if( !('error' in obj) ) {
+                                          kudos_count = obj.result;
+                                      }
+                                      else {
+                                          console.log(obj.error);
+                                      }
+                                }
+                    });
+					$(".num").html(kudos_count);
 				}	
 				// when kudoing
 				$("figure.kudo").bind("kudo:active", function(e)
@@ -178,7 +194,23 @@
 				$("figure.kudo").bind("kudo:added", function(e)
 				{
 					var element = $(this);
+                    var kudo_c = 
 					// ajax'y stuff or whatever you want
+                    jQuery.ajax({
+                        type: "POST",
+                        url: 'kudo.php',
+                        dataType: 'json',
+                        data: {functionname: 'getadd', arguments: [1, 2]},
+
+                        success: function (obj, textstatus) {
+                                      if( !('error' in obj) ) {
+                                          kudo_c = obj.result;
+                                      }
+                                      else {
+                                          console.log(obj.error);
+                                      }
+                                }
+                    });
 					console.log("Kodo'd:", element.data('id'), ":)");
 					// set cookie so user cannot kudo again for 7 days
 					$.cookie(postId, 'true', { expires: 7 });
