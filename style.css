@@ -320,7 +320,7 @@ h2 {
 .info-footer__social {
   position: absolute;
   right: 20px;
-  bottom: 20px;
+  bottom: 30px;
   height: 27px; }
   .info-footer__social-icon, .info-footer__social-icon--dribbble, .info-footer__social-icon--linkedin, .info-footer__social-icon--instagram, .info-footer__social-icon--github, .info-footer__social-icon--twitter {
     float: right;
