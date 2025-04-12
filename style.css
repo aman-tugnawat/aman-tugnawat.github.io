@@ -217,7 +217,7 @@ h2 {
     .info-main {
       margin: 0;
       position: relative;
-      top: 50%;
+      top: 0%;
       transform: translateY(-60%); } }
 .info__headshot, .info__headshot-img {
   display: block;
